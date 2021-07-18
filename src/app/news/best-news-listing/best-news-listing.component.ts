@@ -38,4 +38,8 @@ export class BestNewsListingComponent implements OnInit {
     this.newsService.selectedNewsUrl = url;
     this.router.navigate([this.NEWS_DETAIL_URL]);
   }
+
+  public trackByFn(index, item): void {
+    return index;
+  }
 }

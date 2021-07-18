@@ -21,7 +21,8 @@ $border_image: #F26522;
     flex-direction: column;
     justify-content: space-between;
     padding: 8px;
-    border: 1px solid #cccc;    
+    border: 1px solid #cccc;   
+    margin: 0 auto; 
 
     .image {
       img {
@@ -40,6 +41,7 @@ $border_image: #F26522;
       margin-top: auto;
 
       .border-image {
+        display: flex;
         border: 8px solid $border_image;
         padding: 8px;
       }
