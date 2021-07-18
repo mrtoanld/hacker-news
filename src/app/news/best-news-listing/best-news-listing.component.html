@@ -1,1 +1,3 @@
-<p>best-news-listing works!</p>
+<ng-container *ngFor="let article of articles$ | async">
+  <app-news-card [article]='article' (click)='onCardClick(article.url)'></app-news-card>
+</ng-container>

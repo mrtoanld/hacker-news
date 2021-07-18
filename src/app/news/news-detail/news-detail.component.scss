@@ -1,0 +1,37 @@
+.detail-container {
+  background-color: white;
+  display: flex;
+
+  .image {
+    border-right: 1px solid #cccc;
+
+    img {
+      max-width: 400px;
+      border-right: 1px solid #cccc;
+    }
+  }
+
+  .body {
+    padding: 24px;
+
+    .title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5em;
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+    .description {
+      color: gray;
+      font-style: italic;
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+
+    .content {
+      line-height: 1.5em;
+    }
+  }
+}

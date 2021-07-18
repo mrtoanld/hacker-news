@@ -1,0 +1,92 @@
+$card_height: 350px;
+$card_width: 200px;
+$card_image_height: 120px;
+$card_body_height: 230px;
+
+$bg_light: white;
+$subtitle_color: #cccccc;
+$description_color: gray;
+$border_image: #F26522;
+
+:host {
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  .card-container {
+    max-width: $card_width;
+    height: $card_height;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid #cccc;    
+
+    .image {
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px 5px 0px 0px;
+        max-height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    .default-image-container {
+      padding: 16px 24px;
+      background: #f7f6f2;
+      border-radius: 5px;
+      margin-top: auto;
+
+      .border-image {
+        border: 8px solid $border_image;
+        padding: 8px;
+      }
+    }
+
+    .body {
+      background-color: $bg_light;
+      padding: 10px;
+
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 4px;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        text-align: left;
+        color: $subtitle_color;
+      }
+    }
+
+    .description {
+      background-color: $bg_light;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+      color: $description_color;
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        display: flex;
+        align-items: flex-end;
+
+        span {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,10 @@
-<p>news-detail works!</p>
+<div class="detail-container" *ngIf="article$ | async as article">
+  <div class="image">
+      <img [src]='article.coverImageUrl' [alt]='article.title'>
+  </div>
+  <div class="body">
+      <div class="title">{{ article.title }}</div>
+      <div class="description">{{ article.description }}</div>
+      <div class="content" [innerHTML]='article.content'></div>
+  </div>
+</div>

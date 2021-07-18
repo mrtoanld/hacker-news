@@ -1,0 +1,30 @@
+<div class="card-container" *ngIf='article'>
+  <div class="body">
+    <div class="title">{{ article.title }}</div>
+    <div class="subtitle">{{ article.subtitle }}</div>        
+  </div>
+  <div class="image" [class.default-image-container]='!article.coverImageUrl'>
+      <img [src]='article.coverImageUrl' [alt]='article.title' *ngIf="article.coverImageUrl; else defaultImage">
+  </div>  
+  <div class="description">
+      <div class="point">
+          <mat-icon aria-label="Point">sentiment_satisfied</mat-icon>
+          <span>{{ $any(article).description.point }}</span>
+      </div>        
+      <div class="comment">
+          <mat-icon aria-label="No of comments">mode_comment</mat-icon>
+          <span>{{ $any(article).description.noOfComment }}</span>
+      </div>
+      <div class="date">
+          <mat-icon aria-label="Action date">schedule
+          </mat-icon>
+          <span>{{ $any(article).description.actionDate }}</span>
+      </div>
+  </div>
+</div>
+
+<ng-template #defaultImage>
+  <div class="border-image">
+    <img [src]='DEFAULT_IMAGE' [alt]='article.title'>
+  </div>
+</ng-template>
